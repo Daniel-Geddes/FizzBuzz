@@ -29,5 +29,4 @@ function buzzTemplate() {
         .replace('{{val5}}', output[i+4]);
     }
     document.getElementById('results').innerHTML = resultsHTML;
-
 }
