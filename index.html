@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- boilerplate including links to scripts, stylesheets and google fonts -->
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FizzBuzz!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <script src = "main.js"></script>
+</head>
+<body>
+
+    <!-- Main container div -->
+
+    <header>
+        <h1>FizzBuzz</h1>
+    </header>
+    <div class="rev-style">
+        <label><span>Fizz number: </span><input id = "FizzValue" type = "number" name = "fizz" value = "3" min = "1" max = "100" oninput="validity.valid||(value='');"></label>
+        <label><span>Buzz number: </span><input id = "BuzzValue" type = "number" name = "buzz" value = "5" min = "1" max = "100" oninput="validity.valid||(value='');"></label><br/><br/>
+        <label id = "button"><span></span><input type = "submit" onclick="buzzTemplate()" value = "Submit"></label><br>
+        
+
+
+        <div id = "tableDiv">
+            <table id = "results">
+            <!--results go here-->
+            </table>
+        </div>
+
+        <!-- Template for the table of results| ignored by browser-->
+        <script id = "template-header" type = "text/template">
+            <thead>
+                <tr><th colspan = "5">Results for Fizz Buzz</th></tr>
+            </thead>
+        </script>
+        <script id = "template-row" type = "text/template">
+            <tr>
+                <td>{{val1}}</td><td>{{val2}}</td><td>{{val3}}</td><td>{{val4}}</td><td>{{val5}}</td>
+            </tr>
+        </script>
+        
+
+    
+</body>
+</html>

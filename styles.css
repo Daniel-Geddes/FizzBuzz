@@ -1,0 +1,59 @@
+* {
+    font-family: 'Nunito Sans';
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+body {
+    margin: 0 auto;
+    padding: 3px;
+    background-color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+
+#tableDiv {
+    overflow-x: auto;
+}
+
+.responsive {
+	max-width: 100%;
+	height: auto;
+  }
+
+#results {
+	border-collapse: collapse;
+	width: 100%;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  }
+  
+#results td, #results th {
+	border: 1px solid whitesmoke;
+	padding: 8px;
+  }
+  
+  
+#results th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background: blue;
+	color: whitesmoke;
+  }
+
+.rev-style{
+	max-width: 700px;
+	padding: 20px 12px 10px 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.rev-style label{
+	display: block;
+	margin: 0px 0px 15px 0px;
+}
+
