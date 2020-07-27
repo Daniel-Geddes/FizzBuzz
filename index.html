@@ -20,8 +20,7 @@
     <div class="rev-style">
         <label><span>Fizz number: </span><input id = "FizzValue" type = "number" name = "fizz" value = "3" min = "1" max = "100" oninput="validity.valid||(value='');"></label>
         <label><span>Buzz number: </span><input id = "BuzzValue" type = "number" name = "buzz" value = "5" min = "1" max = "100" oninput="validity.valid||(value='');"></label><br/><br/>
-        <label id = "button"><span></span><input type = "submit" onclick="buzzTemplate()" value = "Submit"></label><br>
-        
+        <label id = "button"><span></span><input type = "submit" onclick="onSubmit()" value = "Submit"></label><br> 
         <div id = "tableDiv">
             <table id = "results">
             <!--results go here-->

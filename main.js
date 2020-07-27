@@ -1,25 +1,23 @@
-//Function which uses a ternary operator. The empty strings eval to false. Empty string + empty string OR i. Will take the right side of the OR statement. Whereas True or i would take the Left side true
-function fizzBuzz(value1, value2) {
+//This function implements the FizzBuzz algorithm, returning an array of strings. Multiples of fizzMultiple are converted to Fizz. Multiples of buzzMultiple
+// are converted to Buzz. Multiples of value 1 and value 2 are converted to FizzBuzz. All other values returned unchanged.
+function fizzBuzz(fizzMultiple, buzzMultiple) {
     let returnArray = [];
     for (let i = 1; i <= 100; i++) {
-        returnArray[i] = ((i % value1 == 0 ? 'Fizz' : '') + (i % value2 == 0 ? 'Buzz' : '') || i);
+        returnArray[i] = ((i % fizzMultiple == 0 ? 'Fizz' : '') + (i % buzzMultiple == 0 ? 'Buzz' : '') || i);
     }
     return returnArray;
 }
 
-//calls and uses the template
-function buzzTemplate() {
+
+//This function gets the values that the user submits and calls the fizzBuzz function, using an array to hold the values and then updates the display table templates with results.
+function onSubmit() {
     let output = [];
     let headTemplate = document.getElementById('template-header');
     let rowTemplate = document.getElementById('template-row');
     let templateHTML = rowTemplate.innerHTML;
     let resultsHTML = headTemplate.innerHTML;
-
-    //gets the values that the user inputs
     let val1 = document.getElementById("FizzValue").value;
     let val2 = document.getElementById("BuzzValue").value;
-
-    //calls the fizzbuzz function, using an array to hold the values and using templating to replace them.
     output = fizzBuzz(val1, val2);
     for (let i = 1; i < output.length; i+=5) {
         resultsHTML += templateHTML.replace('{{val1}}', output[i])
